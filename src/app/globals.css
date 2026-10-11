@@ -67,7 +67,7 @@ button {
   padding: 0 36px;
 }
 .topbar {
-  min-height: 94px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,13 +105,6 @@ button {
   letter-spacing: 1.6px;
   color: var(--muted);
 }
-.intro {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 48px 0 44px;
-  gap: 24px;
-}
 .eyebrow {
   font-size: 10px;
   font-weight: 700;
@@ -119,20 +112,11 @@ button {
   color: var(--muted);
 }
 h1 {
-  font-size: clamp(36px, 5vw, 60px);
-  line-height: 1.08;
-  letter-spacing: -2.5px;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
   font-weight: 500;
-  margin-top: 18px;
-}
-h1 span {
-  color: #6c7d66;
-}
-.intro-note {
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--muted);
-  padding-bottom: 4px;
+  margin-top: 8px;
 }
 .section-line {
   display: flex;
@@ -151,7 +135,7 @@ h1 span {
 }
 .day-selector {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 9px;
 }
 .day-button {
@@ -159,8 +143,8 @@ h1 span {
   border: 1px solid var(--line);
   border-radius: 12px;
   min-width: 0;
-  min-height: 98px;
-  padding: 13px 15px;
+  min-height: 72px;
+  padding: 10px 12px;
   text-align: left;
   position: relative;
   transition: background 0.15s;
@@ -195,7 +179,7 @@ h1 span {
   display: block;
   border-radius: 50%;
   background: #829b6b;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .session-dot.rest {
   background: #b9beb3;
@@ -205,17 +189,41 @@ h1 span {
 }
 .workout-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   gap: 36px;
-  margin-top: 38px;
+  margin-top: 24px;
   align-items: start;
 }
-.session-heading {
+.session-panel {
+  min-width: 0;
+}
+.rotation {
   margin-bottom: 28px;
 }
+.session-heading {
+  margin-bottom: 20px;
+}
+.session-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.back-to-map {
+  font-size: 12px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  text-underline-offset: 4px;
+}
+#muscle-focus,
+#session-exercises {
+  scroll-margin-top: 16px;
+}
 .session-heading h2 {
-  font-size: 36px;
-  letter-spacing: -1.4px;
+  font-size: 28px;
+  letter-spacing: -1px;
   line-height: 1.2;
   margin: 10px 0;
 }
@@ -342,8 +350,9 @@ h1 span {
   align-items: center;
   gap: 12px;
 }
-.map-header h3 {
-  font-size: 17px;
+.map-selection {
+  font-size: 14px;
+  color: #596452;
   line-height: 1.4;
   margin-top: 7px;
   font-weight: 500;
@@ -365,7 +374,7 @@ h1 span {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .body-views figure {
   margin: 0;
@@ -381,7 +390,7 @@ h1 span {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 310px;
+  max-height: 360px;
 }
 .body-outline {
   fill: var(--body);
@@ -405,7 +414,7 @@ h1 span {
   flex-wrap: wrap;
   gap: 10px 20px;
   font-size: 10px;
-  margin: 16px 0 22px;
+  margin: 16px 0;
   color: #596452;
 }
 .map-legend > span {
@@ -422,9 +431,31 @@ h1 span {
 .map-legend .legend-main {
   background: #91bd68;
 }
-.target-details {
+.target-disclosure {
+  margin-top: 0;
   border-top: 1px solid #d8ddce;
-  padding-top: 18px;
+}
+.target-disclosure summary {
+  font-size: 12px;
+  padding: 14px 0;
+  min-height: 48px;
+}
+.map-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+.target-details {
+  padding: 4px 0 16px;
   display: grid;
   gap: 14px;
 }
@@ -459,7 +490,7 @@ h1 span {
 .map-disclaimer {
   font-size: 10px;
   color: #737c6a;
-  margin-top: 20px;
+  margin-top: 12px;
   line-height: 1.6;
 }
 .rest-panel {
@@ -563,7 +594,8 @@ details li span {
     padding: 12px 10px;
   }
   .workout-grid {
-    gap: 22px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
   .map-panel {
     padding: 20px;
@@ -578,30 +610,16 @@ details li span {
       max(16px, env(safe-area-inset-right));
   }
   .topbar {
-    min-height: 72px;
+    min-height: 56px;
   }
   .top-label {
     font-size: 8px;
     max-width: 100px;
     text-align: right;
   }
-  .intro {
-    padding: 32px 0;
-    display: block;
-  }
   h1 {
-    letter-spacing: -1.8px;
-    font-size: 44px;
-  }
-  .intro-note {
-    margin-top: 18px;
-    font-size: 13px;
-  }
-  .intro-note br {
-    display: none;
-  }
-  .intro-note br::after {
-    content: " ";
+    font-size: 30px;
+    letter-spacing: -1px;
   }
   .section-line {
     align-items: flex-start;
@@ -616,13 +634,13 @@ details li span {
     gap: 8px;
   }
   .day-button {
-    min-height: 82px;
+    min-height: 70px;
     padding: 10px 12px;
   }
   .workout-grid {
     grid-template-columns: 1fr;
-    margin-top: 28px;
-    gap: 26px;
+    margin-top: 12px;
+    gap: 24px;
   }
   .session-heading {
     margin-bottom: 16px;
@@ -663,11 +681,11 @@ details li span {
   .session-footer {
     font-size: 12px;
   }
-  .map-header h3 {
-    font-size: 18px;
+  .map-selection {
+    font-size: 13px;
   }
   .body-views svg {
-    max-height: 300px;
+    max-height: min(300px, 40svh);
   }
   .body-views figcaption,
   .map-legend {
@@ -708,7 +726,12 @@ details li span {
     margin-top: 24px;
   }
   .map-panel {
-    padding: 20px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .body-views {
+    gap: 8px;
+    margin-top: 16px;
   }
   .rest-panel p {
     font-size: 14px;

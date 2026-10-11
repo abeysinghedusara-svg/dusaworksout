@@ -56,36 +56,89 @@ export function WorkoutViewer() {
         </a>
         <span className="top-label">YOUR MOVEMENT, MAPPED</span>
       </header>
-      <section className="intro">
-        <div>
-          <p className="eyebrow">THE PUSH / PULL / LEGS PLAN</p>
-          <h1>
-            A little structure.
-            <br />
-            <span>A stronger you.</span>
-          </h1>
-        </div>
-        <p className="intro-note">
-          Know your session. <br />
-          See what you’re training. <br />
-          Build consistency, one day at a time.
-        </p>
-      </section>
-      <section className="rotation">
-        <div className="section-line">
-          <h2>Your rotation</h2>
-          <span>8 days · 6 sessions · 2 recovery days</span>
-        </div>
-        <DaySelector
-          day={state.day}
-          onChange={(day) => setState({ ...state, day, exercise: null })}
-        />
-      </section>
       <div className="workout-grid">
+        <section
+          className="map-panel"
+          id="muscle-focus"
+          aria-labelledby="focus-title"
+          tabIndex={-1}
+        >
+          <div className="map-header">
+            <div>
+              <p className="eyebrow">DAY {state.day + 1} / 08 · MUSCLE FOCUS</p>
+              <h1 id="focus-title">{title}</h1>
+              <p className="map-selection" aria-live="polite">
+                {selected?.name ??
+                  (session === "rest" ? "Rest & recover" : "The whole session")}
+              </p>
+            </div>
+            <span className={`session-badge ${session}`}>{session}</span>
+          </div>
+          <MuscleMap primary={primary} secondary={secondary} />
+          <div className="map-legend">
+            <span>
+              <i className="legend-main" />
+              Main target
+            </span>
+            <span>
+              <i className="legend-secondary" />
+              Assists / stabilizes
+            </span>
+          </div>
+          <details className="target-disclosure">
+            <summary>Muscle targets &amp; exercise cues</summary>
+            <div className="target-details" aria-live="polite">
+              <div>
+                <h4>Main targets</h4>
+                <div className="muscle-tags">
+                  {primary.length ? (
+                    primary.map((m) => <span key={m}>{muscleNames[m]}</span>)
+                  ) : (
+                    <span>No loaded training today</span>
+                  )}
+                </div>
+              </div>
+              {secondary.length > 0 && (
+                <div>
+                  <h4>Assists / stabilizes</h4>
+                  <p>{secondary.map((m) => muscleNames[m]).join(" · ")}</p>
+                </div>
+              )}
+              {selected && <p className="exercise-cue">{selected.cue}</p>}
+            </div>
+          </details>
+          <a className="map-action" href="#session-exercises">
+            {session === "rest" ? "View recovery plan" : `View ${exercises.length} exercises`}
+            <span aria-hidden="true">↓</span>
+          </a>
+          <p className="map-disclaimer">
+            Simplified anatomy. Highlights show involvement, not measured
+            activation or predicted growth.
+          </p>
+        </section>
         <section className="session-panel">
-          <div className="session-heading">
+          <section className="rotation" aria-labelledby="rotation-title">
+            <div className="section-line">
+              <h2 id="rotation-title">Your rotation</h2>
+              <span>8-day plan · select a day</span>
+            </div>
+            <DaySelector
+              day={state.day}
+              onChange={(day) => setState({ ...state, day, exercise: null })}
+            />
+          </section>
+          <div
+            className="session-heading"
+            id="session-exercises"
+            tabIndex={-1}
+          >
             <p className="eyebrow">DAY {state.day + 1} / 08</p>
-            <h2>{title}</h2>
+            <div className="session-title-row">
+              <h2>{session === "rest" ? "Your recovery" : "Your session"}</h2>
+              <a className="back-to-map" href="#muscle-focus">
+                See map ↑
+              </a>
+            </div>
             <p>{sessionDescriptions[session]}</p>
           </div>
           {session === "rest" ? (
@@ -142,52 +195,6 @@ export function WorkoutViewer() {
               </p>
             </>
           )}
-        </section>
-        <section className="map-panel">
-          <div className="map-header">
-            <div>
-              <p className="eyebrow">MUSCLE FOCUS</p>
-              <h3>
-                {selected?.name ??
-                  (session === "rest" ? "Rest & recover" : "The whole session")}
-              </h3>
-            </div>
-            <span className={`session-badge ${session}`}>{session}</span>
-          </div>
-          <MuscleMap primary={primary} secondary={secondary} />
-          <div className="map-legend">
-            <span>
-              <i className="legend-main" />
-              Main target
-            </span>
-            <span>
-              <i className="legend-secondary" />
-              Assists / stabilizes
-            </span>
-          </div>
-          <div className="target-details" aria-live="polite">
-            <div>
-              <h4>Main targets</h4>
-              <div className="muscle-tags">
-                {primary.length ? (
-                  primary.map((m) => <span key={m}>{muscleNames[m]}</span>)
-                ) : (
-                  <span>No loaded training today</span>
-                )}
-              </div>
-            </div>
-            {secondary.length > 0 && (
-              <div>
-                <h4>Assists / stabilizes</h4>
-                <p>{secondary.map((m) => muscleNames[m]).join(" · ")}</p>
-              </div>
-            )}
-            {selected && <p className="exercise-cue">{selected.cue}</p>}
-          </div>
-          <p className="map-disclaimer">
-            Simplified anatomy. Highlights show involvement, not measured
-            activation or predicted growth.
-          </p>
         </section>
       </div>
       <section className="training-notes">
