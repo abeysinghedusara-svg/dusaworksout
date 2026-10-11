@@ -1,0 +1,363 @@
+{
+  "front": [
+    {
+      "muscle": null,
+      "shapes": [
+        {
+          "tag": "ellipse",
+          "attrs": {
+            "cx": "100",
+            "cy": "29",
+            "rx": "20",
+            "ry": "24"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M88 51 L88 62 Q57 60 48 84 L32 146 L25 196 Q30 210 39 200 L49 157 L63 117 L66 171 L58 208 L67 266 L66 321 L58 345 Q73 353 83 344 L89 278 L100 230 L111 278 L117 344 Q127 353 142 345 L134 321 L133 266 L142 208 L134 171 L137 117 L151 157 L161 200 Q170 210 175 196 L168 146 L152 84 Q143 60 112 62 L112 51 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "frontdelts",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M64 71 Q47 72 46 98 L60 105 L73 81 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M136 71 Q153 72 154 98 L140 105 L127 81 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "sidedelts",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M50 77 Q42 87 43 101 L49 107 L54 95 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M150 77 Q158 87 157 101 L151 107 L146 95 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "chest",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M74 73 L98 76 L98 111 Q79 117 65 102 L63 88 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M126 73 L102 76 L102 111 Q121 117 135 102 L137 88 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "biceps",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M51 105 L61 110 L50 146 L40 143 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M149 105 L139 110 L150 146 L160 143 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "forearms",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M39 149 L48 151 L36 194 L29 197 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M161 149 L152 151 L164 194 L171 197 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "core",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M80 118 L98 120 L98 176 L88 186 L76 168 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M120 118 L102 120 L102 176 L112 186 L124 168 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "quads",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M65 201 Q77 190 94 207 L84 263 L70 264 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M135 201 Q123 190 106 207 L116 263 L130 264 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "adductors",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M88 196 L98 204 L92 234 L85 249 L84 229 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M112 196 L102 204 L108 234 L115 249 L116 229 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "calves",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M70 279 L82 279 L77 319 L70 322 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M130 279 L118 279 L123 319 L130 322 Z"
+          }
+        }
+      ]
+    }
+  ],
+  "back": [
+    {
+      "muscle": null,
+      "shapes": [
+        {
+          "tag": "ellipse",
+          "attrs": {
+            "cx": "100",
+            "cy": "29",
+            "rx": "20",
+            "ry": "24"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M88 51 L88 62 Q57 60 48 84 L32 146 L25 196 Q30 210 39 200 L49 157 L63 117 L66 171 L58 208 L67 266 L66 321 L58 345 Q73 353 83 344 L89 278 L100 230 L111 278 L117 344 Q127 353 142 345 L134 321 L133 266 L142 208 L134 171 L137 117 L151 157 L161 200 Q170 210 175 196 L168 146 L152 84 Q143 60 112 62 L112 51 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "upperback",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M88 60 L100 69 L112 60 L130 79 L112 98 L100 130 L88 98 L70 79 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "reardelts",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M65 73 Q47 74 46 100 L62 108 L74 84 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M135 73 Q153 74 154 100 L138 108 L126 84 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "sidedelts",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M50 77 Q42 87 43 101 L49 107 L54 95 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M150 77 Q158 87 157 101 L151 107 L146 95 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "triceps",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M50 107 L62 111 L50 147 L40 144 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M150 107 L138 111 L150 147 L160 144 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "lats",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M67 102 L87 109 L96 137 L89 165 L71 150 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M133 102 L113 109 L104 137 L111 165 L129 150 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "erectors",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M93 130 L98 136 L98 185 L88 184 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M107 130 L102 136 L102 185 L112 184 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "forearms",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M39 150 L48 152 L36 194 L29 197 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M161 150 L152 152 L164 194 L171 197 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "glutes",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M66 181 Q82 174 98 190 L97 217 Q75 228 62 210 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M134 181 Q118 174 102 190 L103 217 Q125 228 138 210 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "hamstrings",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M65 223 Q78 228 94 221 L84 264 L70 266 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M135 223 Q122 228 106 221 L116 264 L130 266 Z"
+          }
+        }
+      ]
+    },
+    {
+      "muscle": "calves",
+      "shapes": [
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M69 277 Q80 268 85 282 L80 312 L71 321 L68 303 Z"
+          }
+        },
+        {
+          "tag": "path",
+          "attrs": {
+            "d": "M131 277 Q120 268 115 282 L120 312 L129 321 L132 303 Z"
+          }
+        }
+      ]
+    }
+  ]
+}
